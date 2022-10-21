@@ -30,7 +30,7 @@ Este desafio consiste na implementação de um Backend em **NodeJS com TypeScrip
 **Cuidado que o types (tipo do pokemon) pode existir pokemons com mais de um tipo, como o "slowpoke". Neste caso concatene em uma string os tipos.**
 
 ## ✅ Resposta Esperada
-GET http://localhost:8081/pokemon/:pokemonName
+GET http://localhost:8081/poke-api/v1/pokemon/:pokemonName
 
 ```javascript
 {
