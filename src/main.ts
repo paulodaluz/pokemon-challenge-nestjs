@@ -1,15 +1,14 @@
 import { Logger } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
-import { PokemonModule } from './v1/pokemon.module';
+import { AppModule } from './v1/app.module';
 
 async function bootstrap() {
   const port = process.env.PORT || 8081;
-  const host = process.env.HOST || '0.0.0.0';
 
-  const app = await NestFactory.create(PokemonModule);
+  const app = await NestFactory.create(AppModule);
   app.setGlobalPrefix(String(process.env.APPLICATION_PREFIX));
 
-  await app.listen(port, host, () => Logger.log(`Server running on port ${port}`));
+  await app.listen(port, () => Logger.log(`Server running on port ${port}`));
 }
 
 bootstrap();

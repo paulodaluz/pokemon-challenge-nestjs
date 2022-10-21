@@ -1,6 +1,6 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { PokemonBuilder } from '../builders/pokemon.builder';
-import { PokemonResponse } from '../interfaces/pokemon.interface';
+import { Pokemon } from '../interfaces/pokemon.interface';
 import { PokemonRepository } from '../repository/pokemon.repository';
 
 @Injectable()
@@ -12,7 +12,7 @@ export class PokemonService {
     private readonly pokemonBuilder: PokemonBuilder
     ) {}
 
-  async getPokemon(pokemon: string): Promise<PokemonResponse> {
+  async getPokemon(pokemon: string): Promise<Pokemon> {
     Logger.log(
       `pokemon = ${pokemon}`,
       `${this.className} - ${this.getPokemon.name}`,

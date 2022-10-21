@@ -2,7 +2,7 @@ import { HttpService } from "@nestjs/axios";
 import { Injectable, Logger } from "@nestjs/common";
 import { lastValueFrom } from "rxjs";
 import { PokemonApiResponse } from "../interfaces/pokemonApiResponse.interface";
-import { ErrorUtils } from "../utils/error.utils";
+import { ErrorUtils } from "../../utils/error.utils";
 
 @Injectable()
 export class PokemonRepository {
@@ -16,7 +16,7 @@ export class PokemonRepository {
       `${this.className} - ${this.getPokemon.name}`,
     );
 
-    const request = this.httpService.get(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
+    const request = this.httpService.get(`${process.env.POKEMON_API_URL}/pokemon/${pokemon}`);
 
     const response = await lastValueFrom(request).catch((error: any) => {
       Logger.error(
