@@ -7,11 +7,11 @@ Este desafio consiste na implementação de um Backend em **NodeJS com TypeScrip
 
 ## 🚧 Requisitos
 - [x] O backend deverá ter uma rota GET onde receberá por path parameter o nome do pokemon.
-- [ ] O backend deverá consumir a api PokéAPI (exemplo de request da api abaixo).
+- [x] O backend deverá consumir a api PokéAPI (exemplo de request da api abaixo).
 - [x] O backend deverá trazer dados no formato correto (rota GET na sessão Resposta Esperada, um pouco mais a baixo na descrição do desafio).
 - [ ] O backend deverá contar com a cobertura de testes unitários.
 - [x] Deverá estar tipado corretamente.
-- [ ] Deverá retornar erros tratados.
+- [x] Deverá retornar erros tratados.
 ```
     Ex: Status 404, Nenhum pokemon encontrado.
 ```
@@ -30,7 +30,7 @@ Este desafio consiste na implementação de um Backend em **NodeJS com TypeScrip
 **Cuidado que o types (tipo do pokemon) pode existir pokemons com mais de um tipo, como o "slowpoke". Neste caso concatene em uma string os tipos.**
 
 ## ✅ Resposta Esperada
-GET http://localhost:8081/pokemon/:pokemonName
+GET http://localhost:8081/poke-api/v1/pokemon/:pokemonName
 
 ```javascript
 {
